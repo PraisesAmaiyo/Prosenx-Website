@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Request received - Prosenx</title>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Geist:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet" />
+   <script src="https://code.iconify.design/iconify-icon/3.0.2/iconify-icon.min.js"></script>
+   <style>
+      * {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0
+      }
+
+      body {
+         font-family: 'Geist', sans-serif;
+         background: #f8fafc;
+         color: #f0f2f8;
+         min-height: 100vh;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         padding: 2rem;
+         -webkit-font-smoothing: antialiased
+      }
+
+      .card {
+         background: #19202f;
+         border: 1px solid rgba(255, 255, 255, 0.07);
+         border-radius: 16px;
+         padding: 3rem 2.5rem;
+         max-width: 480px;
+         width: 100%;
+         text-align: center
+      }
+
+      .icon-wrap {
+         width: 64px;
+         height: 64px;
+         border-radius: 50%;
+         background: rgba(16, 185, 129, 0.12);
+         border: 1px solid rgba(16, 185, 129, 0.2);
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin: 0 auto 1.5rem;
+         font-size: 2rem;
+         color: #10b981
+      }
+
+      h1 {
+         font-size: 1.625rem;
+         font-weight: 700;
+         letter-spacing: -.025em;
+         margin-bottom: .75rem
+      }
+
+      p {
+         font-size: .9375rem;
+         color: #8c92a8;
+         line-height: 1.75;
+         margin-bottom: 1.75rem
+      }
+
+      .divider {
+         border: none;
+         border-top: 1px solid rgba(255, 255, 255, 0.07);
+         margin: 1.75rem 0
+      }
+
+      .next-steps {
+         text-align: left;
+         display: flex;
+         flex-direction: column;
+         gap: .875rem;
+         margin-bottom: 1.75rem
+      }
+
+      .next-step {
+         display: flex;
+         align-items: flex-start;
+         gap: .75rem;
+         font-size: .875rem;
+         color: #8c92a8
+      }
+
+      .next-step iconify-icon {
+         color: #046a75;
+         flex-shrink: 0;
+         font-size: 1.125rem;
+         margin-top: .125rem
+      }
+
+      .btn {
+         display: inline-flex;
+         align-items: center;
+         gap: .5rem;
+         font-size: .9375rem;
+         font-weight: 600;
+         padding: .875rem 1.75rem;
+         border-radius: 8px;
+         text-decoration: none;
+         transition: all .2s;
+         background: #046a75;
+         color: #fff;
+         width: 100%;
+         justify-content: center
+      }
+
+      .btn:hover {
+         background: #057a87
+      }
+
+      .btn-ghost {
+         background: transparent;
+         border: 1px solid rgba(255, 255, 255, 0.12);
+         color: #f0f2f8;
+         margin-top: .75rem
+      }
+
+      .btn-ghost:hover {
+         border-color: #046a75;
+         color: #046a75
+      }
+
+      .logo {
+         font-size: 1.125rem;
+         font-weight: 700;
+         color: #19202f;
+         margin-bottom: 2.5rem;
+         letter-spacing: -.02em
+      }
+
+      .logo span {
+         color: #046a75
+      }
+   </style>
+</head>
+
+<body>
+   <div class="logo">Prosen<span>x</span></div>
+
+   <div class="card">
+      <div class="icon-wrap">
+         <iconify-icon icon="tabler:circle-check" inline></iconify-icon>
+      </div>
+      <h1>Request received</h1>
+      <p>Thanks for reaching out. We'll get back to you within one business day to schedule your demo.</p>
+
+      <div class="divider"></div>
+
+      <div class="next-steps">
+         <!-- <div class="next-step">
+            <iconify-icon icon="tabler:mail" inline></iconify-icon>
+            <span>Check your inbox — we'll send a confirmation shortly.</span>
+         </div> -->
+         <div class="next-step">
+            <iconify-icon icon="tabler:clock" inline></iconify-icon>
+            <span>We'll reach out within one business day to find a time that works for you.</span>
+         </div>
+         <div class="next-step">
+            <iconify-icon icon="tabler:rocket" inline></iconify-icon>
+            <span>Can't wait? Start a free 14-day trial right now — no card needed.</span>
+         </div>
+      </div>
+
+      <a href="https://app.prosenx.com/register" class="btn">
+         <iconify-icon icon="tabler:rocket" inline></iconify-icon>
+         Start free trial now
+      </a>
+      <a href="https://prosenx.com" class="btn btn-ghost">
+         <iconify-icon icon="tabler:arrow-left" inline></iconify-icon>
+         Back to Prosenx
+      </a>
+   </div>
+</body>
+
+</html>

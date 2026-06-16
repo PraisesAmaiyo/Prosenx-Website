@@ -1,0 +1,26 @@
+# User-Agent rules apply to all web crawlers
+User-agent: *
+
+# Allow crawling of the main public website
+Allow: /
+Allow: /index.html
+Allow: /features.html
+Allow: /pricing.html
+Allow: /about.html
+Allow: /contact.html
+
+# Disallow indexing of sensitive legal and administrative directories
+Disallow: /privacy.html
+Disallow: /terms.html
+
+# Explicitly block crawlers from hunting inside the app infrastructure 
+# (Good practice even if app.prosenx.com is managed separately)
+Disallow: /app/
+Disallow: /dashboard/
+Disallow: /api/
+
+# Host setting to define the preferred canonical domain
+Host: https://prosenx.com
+
+# Link to your XML Sitemap to speed up discovery of your marketing pages
+Sitemap: https://prosenx.com/sitemap.xml
