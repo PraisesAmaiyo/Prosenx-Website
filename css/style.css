@@ -945,7 +945,7 @@ nav.scrolled {
   border-bottom: none;
 }
 
-/* Desktop — Asymmetric Massive Breakout Transformation */
+/* Desktop - Asymmetric Massive Breakout Transformation */
 @media (min-width: 1024px) {
   .feature-deep-grid {
     grid-template-columns: 5fr 7fr;
@@ -986,7 +986,7 @@ nav.scrolled {
   }
 }
 
-/* Tablet Scale Fallback — Safely constraints the image prior to stacking under text copy */
+/* Tablet Scale Fallback - Safely constraints the image prior to stacking under text copy */
 @media (max-width: 1023px) and (min-width: 768px) {
   .feature-deep-grid {
     grid-template-columns: 1fr;
