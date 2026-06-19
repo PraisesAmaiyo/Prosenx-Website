@@ -473,3 +473,150 @@ function switchTab(tabId) {
     if (video) video.pause();
   }
 }
+
+// Tesimonial section
+
+// const testimonials = [
+//   {
+//     name: 'Verified Compliance Audit',
+//     role: 'HSE Manager • Mari**** Logistics Limited',
+//     content:
+//       'We used to track over 40 dynamic NIMASA and DPR certificates using an Excel sheet. One missed cell almost cost us our mobilization pass last year. Managing this manually is a massive risk.',
+//     image:
+//       'https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&w=100&h=100&q=80',
+//   },
+//   {
+//     name: 'Industry Survey Feedback',
+//     role: 'Procurement Director • Pre**** Constructions',
+//     content:
+//       'When vetting sub-contractors for major JV tenders, an expired compliance document is the fastest way to drop an agency. We don’t check intentions; we check active validity dates.',
+//     image:
+//       'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=100&h=100&q=80',
+//   },
+//   {
+//     name: 'Verified Compliance Audit',
+//     role: 'Managing Director • Oilfield Services',
+//     content:
+//       'The cost of keeping heavy machinery standby because a local statutory permit renewal delayed at the state level is insane. If you lack early warnings, you bleed operational cash flow.',
+//     image:
+//       'https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&w=100&h=100&q=80',
+//   },
+//   {
+//     name: 'Tender Board Review',
+//     role: 'Contract Engineer • EPC Contractor',
+//     content:
+//       'People focus on technical proposals, but compliance vetting is the real gatekeeper. If your NSITF or ITF paperwork is caught invalid by even 48 hours, your tender file gets packed away.',
+//     image:
+//       'https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?auto=format&fit=crop&w=100&h=100&q=80',
+//   },
+//   {
+//     name: 'Industry Survey Feedback',
+//     role: 'Operations Lead • Scaffolding & Haulage',
+//     content:
+//       'A spreadsheet reminder only works if someone opens the document daily. Having an automatic tracker that pushes clear email warnings directly to the person responsible changes everything.',
+//     image:
+//       'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=100&h=100&q=80',
+//   },
+//   {
+//     name: 'Verified Compliance Audit',
+//     role: 'HSE Consultant • Regulatory Advisory',
+//     content:
+//       'Most operational lapses aren’t intentional; they happen because managers forget. When tracking moves out of memory and into automation, compliance rates hit absolute safety.',
+//     image:
+//       'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=100&h=100&q=80',
+//   },
+//   {
+//     name: 'Verified Compliance Audit',
+//     role: 'QHSE Director • Energy Infrastructure',
+//     content:
+//       'During our last corporate review, pulling up old certificate variations manually took days. Transitioning to a system with an automatic history trail saved our audit timeline.',
+//     image:
+//       'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=100&h=100&q=80',
+//   },
+//   {
+//     name: 'Tender Board Review',
+//     role: 'Procurement Specialist • Supply Chain Partner',
+//     content:
+//       'We frequently see sub-contractors lose out on massive mobilization windows because a tiny statutory paper expired during the bidding break. Prosenx solves a very expensive problem.',
+//     image:
+//       'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=100&h=100&q=80',
+//   },
+// ];
+
+const testimonials = [
+  {
+    label: 'The Excel Gap',
+    content:
+      'Many contractors track dozens of NIMASA, DPR, and statutory certificates on a single spreadsheet. One missed cell, one wrong date, and a mobilization pass is gone.',
+  },
+  {
+    label: 'The Tender Disqualification',
+    content:
+      "During sub-contractor vetting for JV tenders, an expired compliance document is the fastest way to get dropped. Intentions don't matter — only active validity dates do.",
+  },
+  {
+    label: 'The 48-Hour Cutoff',
+    content:
+      'Technical proposals get the attention, but compliance paperwork is the real gatekeeper. An NSITF or ITF document caught invalid by even 48 hours can get a tender file pulled entirely.',
+  },
+  {
+    label: 'The Silent Reminder',
+    content:
+      'A spreadsheet reminder only works if someone remembers to open it. Without an automatic alert reaching the person responsible, renewal dates quietly pass unnoticed.',
+  },
+  {
+    label: 'The Memory Lapse',
+    content:
+      "Most compliance failures aren't willful — they happen because a renewal date lived in someone's head instead of a system. The moment tracking depends on memory, it eventually fails.",
+  },
+  {
+    label: 'The Audit Scramble',
+    content:
+      'When a corporate review or client audit requests certificate history, pulling old versions and renewal trails manually can take days. Without a record, the scramble starts from zero.',
+  },
+  {
+    label: 'The Mobilization Window',
+    content:
+      'Sub-contractors regularly lose mobilization windows because one statutory document expired mid-bid. A small administrative gap becomes a very expensive missed contract.',
+  },
+];
+
+const createTestimonialCard = (testimonial) => {
+  return `
+        <div class="card">
+            <div class="content">
+              ${testimonial.content}
+            </div>
+          </div>
+    `;
+  //   <div class="card">
+  //       <div class="profile">
+  //         <img src="${testimonial.image}" alt="${testimonial.name}" />
+  //         <div>
+  //           <div class="name">${testimonial.name}</div>
+  //           <div class="role">${testimonial.role}</div>
+  //         </div>
+  //       </div>
+
+  //       <div class="content">
+  //         ${testimonial.content}
+  //       </div>
+  //     </div>
+};
+
+const populateColumn = (columnId) => {
+  const column = document.getElementById(columnId);
+  if (!column) return;
+
+  [...testimonials, ...testimonials].forEach((testimonial) => {
+    column.innerHTML += createTestimonialCard(testimonial);
+  });
+};
+
+// Randomized infinite scroll loops
+testimonials.sort(() => Math.random() - 0.5);
+populateColumn('column1');
+testimonials.sort(() => Math.random() - 0.5);
+populateColumn('column2');
+testimonials.sort(() => Math.random() - 0.5);
+populateColumn('column3');
