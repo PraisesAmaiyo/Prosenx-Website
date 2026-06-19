@@ -128,7 +128,7 @@
                <div class="hero-eyebrow">
                   <span class="tag">
                      <iconify-icon icon="tabler:shield-check" inline></iconify-icon>
-                     Eliminate Tender Disqualification Risks
+                     Compliance Intelligence Platform
                   </span>
                </div>
 
@@ -137,17 +137,16 @@
                   <span class="serif-accent">Spreadsheets & Memory.</span>
                </h1>
 
-               <br class="hero-sub" style="margin-bottom: 1.5rem;">
-               Imagine losing a multi-million dollar contract to your main competitor because of a single expired
-               permit. When the bidding closes, missing/expired paperwork means instant disqualification. </br>Prosenx
-               automates
-               tracking for critical regulatory permits, statutory licenses, and asset certifications.
+               <p class="hero-sub" style="margin-bottom: 1.5rem;">
+                  Protect your operations from unexpected regulatory expirations, maintain tender
+                  eligibility, and ensure your entire organization is permanently audit-ready. Prosenx automates
+                  tracking for critical regulatory permits, statutory licenses, and asset certifications.
                </p>
 
                <div class="btn-group">
                   <button class="btn-lg btn-lg-primary" onclick="window.open('https://app.prosenx.com/register')">
                      <iconify-icon icon="tabler:rocket" inline></iconify-icon>
-                     Start Tracking For FREE
+                     Start free trial
                   </button>
 
                   <!-- <a href="/pricing.html" class="inline-block">
@@ -195,8 +194,8 @@
             <div class="section-heading">
                <div class="label">The Problem</div>
                <h2>Compliance failures are expensive.</h2>
-               <p>If your regulatory permits are sitting on a spreadsheet right now, your business is actively exposed
-                  to:</p>
+               <p>Manual systems - spreadsheets, email reminders, shared folders - create blind spots. When a permit
+                  lapses, it doesn't just cost a fine. It can stop your entire operation.</p>
             </div>
             <div class="grid-3">
                <div class="card card-teal reveal">
