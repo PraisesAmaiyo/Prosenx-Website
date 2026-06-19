@@ -513,6 +513,7 @@ nav.scrolled {
   line-height: 1.3;
   margin-top: 3rem;
   color: var(--text2);
+  text-align: center;
 }
 
 .problem-statement strong {
@@ -1451,7 +1452,7 @@ footer {
   }
 
   .workflow-steps {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
 
@@ -1829,5 +1830,121 @@ footer {
 
   .lightbox-close-btn:hover {
     transform: translateX(50%) scale(1.05);
+  }
+}
+
+/* --- Prosenx Premium CTA Section Styles --- */
+
+.cta-section {
+  padding: 80px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-tag {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #c5a880; /* Premium muted gold/brass accent */
+  margin-bottom: 20px;
+}
+
+.cta-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.3;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.cta-description {
+  font-size: 16px;
+  font-weight: 400;
+  color: #a0aec0; /* Balanced, readable gray */
+  line-height: 1.6;
+  max-width: 640px;
+  margin: 0 auto 36px auto;
+}
+
+.cta-btn-container {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center !important;
+}
+
+.cta-action-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #ffffff;
+  color: #0b0c10;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 16px 36px;
+  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+/* Premium Minimalist Hover Effect */
+.cta-button:hover {
+  background-color: #c5a880; /* Shifting to gold on hover */
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(197, 168, 128, 0.3);
+}
+
+.cta-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.cta-button:hover .cta-icon {
+  transform: translateX(4px); /* Interactive arrow push */
+}
+
+.cta-microcopy {
+  font-size: 13px;
+  color: #718096; /* Muted text for secondary details */
+  font-weight: 500;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 60px 16px;
+  }
+
+  .cta-container {
+    padding: 40px 20px;
+  }
+
+  .cta-title {
+    font-size: 26px;
+  }
+
+  .cta-description {
+    font-size: 15px;
+  }
+
+  .cta-button {
+    width: 100%; /* Full width button on mobile for easier thumb clicking */
+    padding: 16px 24px;
   }
 }
