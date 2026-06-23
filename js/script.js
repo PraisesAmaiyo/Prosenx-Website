@@ -252,17 +252,17 @@ function toggleBilling() {
   annualLabel.style.color = isAnnual ? 'var(--text)' : 'var(--text2)';
 
   if (isAnnual) {
-    document.getElementById('starter-price').textContent = '₦5,000';
+    document.getElementById('starter-price').textContent = '₦4,999';
     document.getElementById('starter-period').textContent = ' / month';
     document.getElementById('starter-annual-note').style.display = 'block';
-    document.getElementById('pro-price').textContent = '₦20,000';
+    document.getElementById('pro-price').textContent = '₦14,999,000';
     document.getElementById('pro-period').textContent = ' / month';
     document.getElementById('pro-annual-note').style.display = 'block';
   } else {
-    document.getElementById('starter-price').textContent = '₦7,000';
+    document.getElementById('starter-price').textContent = '₦6,999';
     document.getElementById('starter-period').textContent = ' / month';
     document.getElementById('starter-annual-note').style.display = 'none';
-    document.getElementById('pro-price').textContent = '₦25,000';
+    document.getElementById('pro-price').textContent = '₦14,999';
     document.getElementById('pro-period').textContent = ' / month';
     document.getElementById('pro-annual-note').style.display = 'none';
   }
