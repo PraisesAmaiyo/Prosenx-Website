@@ -476,33 +476,111 @@ nav.scrolled {
   align-items: center;
 }
 
-/* Trust bar */
+/* Trust and permits section */
+
 .trust-bar {
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  padding: 2.5rem 0;
+  padding: 1.5rem 0;
+  overflow: hidden;
+  background: var(--surface-container-lowest);
 }
 
-.trust-items {
+.trust-ticker-row {
+  overflow: hidden;
+  margin: 0.75rem 0;
+  /* Premium fade on sides so elements don't abruptly clip at edges */
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 15%,
+    black 85%,
+    transparent
+  );
+}
+
+.trust-ticker-track {
   display: flex;
   align-items: center;
-  gap: 3rem;
-  flex-wrap: wrap;
-  justify-content: center;
+  gap: 4rem; /* Increased gap slightly to accommodate graphics nicely */
+  width: max-content;
+}
+
+/* Pause track movement when user hovers to inspect a logo */
+.trust-ticker-row:hover .trust-ticker-track {
+  animation-play-state: paused;
+}
+
+.scroll-left {
+  animation: scrollLeft 32s linear infinite;
+}
+.scroll-right {
+  animation: scrollRight 32s linear infinite;
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes scrollRight {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .trust-item {
   display: flex;
   align-items: center;
-  gap: 0.625rem;
+  gap: 0.75rem;
   font-size: 0.8125rem;
   font-weight: 500;
-  color: var(--text3);
+  color: var(--text2); /* Made slightly prominent */
+  white-space: nowrap;
+  transition: color 0.3s ease;
 }
 
+/* Regulatory Logo styling */
+.regulatory-logo img {
+  height: 48px; /* Perfectly structured utility height */
+  width: auto;
+  object-fit: contain;
+  /* Enforces monochromatic integration with your layout by default */
+  filter: grayscale(100%) opacity(60%);
+  transition:
+    filter 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.3s ease;
+}
+
+/* Smooth Interactive Hover Effects */
+.regulatory-logo:hover img {
+  filter: grayscale(0%) opacity(100%);
+  transform: scale(1.08); /* Tiny high-end pop */
+}
+
+.regulatory-logo:hover {
+  color: var(--text);
+  cursor: pointer;
+}
+
+/* Aligning tracking capabilities with Solar icons matching DESIGN.md */
 .trust-item iconify-icon {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   color: var(--teal);
+  opacity: 0.85;
 }
 
 /* Problem section */
