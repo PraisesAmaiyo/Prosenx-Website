@@ -10,7 +10,7 @@
 
 (function () {
   // ── Config — update these ──────────────────────────────────────────────
-  const WHATSAPP_NUMBER = '2348130909020';
+  const WHATSAPP_NUMBER = '2347063274454';
   const WHATSAPP_MESSAGE = "Hi, I'd like to know more about Prosenx.";
 
   // ── Build the widget markup ────────────────────────────────────────────
